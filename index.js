@@ -48,13 +48,14 @@ function displayResults(searchResults) {
 
 function searchWikipedia(event) {
   if (event.key === "Enter") {
+
     spinnerEl.classList.remove("d-none");
     searchResultsEl.textContent = "";
 
     let searchInput = searchInputEl.value;
     let url = "https://apis.ccbp.in/wiki-search?search=" + searchInput;
     let options = {
-      method: "GET",
+      method: "GET"
     };
 
     fetch(url, options)
